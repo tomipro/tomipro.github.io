@@ -607,7 +607,8 @@ footer h1{
     .servicio{
         width: 100%;
     }
-    .carousel{
+    .item{
+        width: auto;
         height: 20%;
     }
 }
