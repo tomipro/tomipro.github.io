@@ -607,6 +607,9 @@ footer h1{
     .servicio{
         width: 100%;
     }
+    .carousel{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 600px){
     .servicio{
