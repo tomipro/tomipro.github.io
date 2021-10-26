@@ -1,0 +1,619 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Ubuntu",sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #353b48;
+    
+}
+
+
+.inner-width{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+    overflow: hidden;
+}
+
+/* .navbar{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s linear;
+    padding: 20px 100px;
+    z-index: 999;
+} */
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+.logo{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: .25rem;
+    left: 1rem;
+    background-image: url(/img/black-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.links-nav{
+    height: 100%;
+}
+
+.links-nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.links-nav li{
+    list-style: none;
+}
+
+.links-nav li a{
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    color: #000;
+    font-weight: bold;
+    transition: 0.5s linear;
+}
+
+.activar-boton{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.activar-boton .barra{
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+}
+.navbar.sticky .barra{
+    background-color: #fff;
+}
+.navbar.sticky{
+    background: #000;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 999;
+    width: 100%;
+    transition: 0.6s linear ease-in-out;
+}
+
+.navbar.sticky ul li a{
+    color: #fff;
+}
+
+.navbar.sticky .logo{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/white-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.6s linear ease-in-out;
+}
+
+.navbar.sticky .barras{
+    background-color: #fff;
+}
+
+.navbar.sticky a:hover,
+.navbar a:hover{
+    transform: scale(1.15);
+    color: #717171;
+}
+
+#home{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(#a6d8ff,#fff);
+}
+
+#home .inner-width{
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    height: 100%;
+    text-align: right;
+}
+
+
+#home .contenido{
+    width: 100%;
+    color: #717171;
+}
+
+/* #home .contenido h1{
+    font-size: 60px;
+    margin-bottom: 60px;
+    padding-top: 35vh;
+} */
+#home .contenido h1{
+    display: flex;
+    font-size: 8vw;
+    margin-bottom: 60px;
+    text-align: left;
+    position: absolute;
+    padding-top: 8vh;
+    color: #fff;
+    text-shadow: -3px 3px 0px #000,
+    -6px 6px 0px #000,
+    -10px 10px 0px #000;
+}
+.sm a{
+    font-size: 22px;
+    color: #717171;
+    padding-top: 20vh;
+}
+.sm a:hover{
+    color: red;
+}
+.botonContactoHome a{
+    color: #717171;
+    border: 1px solid;
+    border-radius: 15%;
+    width: 180px;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 70vh;
+    margin-left: 50vw;
+}
+
+
+/* .botonContactoHome{
+    margin-top: 60px; 
+}
+
+.botonContactoHome a{
+    display: inline-block;
+    margin: 15px 30px;
+    color: #717171;
+    font-size: 15px;
+    font-weight: 500;
+    width: 180px;
+    border: 1px solid;
+    padding: 10px 0;    
+    border-radius: 6px;
+    transition: .5s linear;
+    text-align: center;
+}
+
+.botonContactoHome a:hover{
+    background-color: #48dbfb;
+    color: #fff;
+} */
+/*------*/
+
+/* .botonContactoHome{
+    padding: 10px 20px;
+    
+} */
+
+/* .botonContactoHome::before,
+.botonContactoHome::after{
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.075, 0.83, 0.165, 1);
+    border: none;
+    border-radius: 20px;
+}
+
+.botonContactoHome:hover:before{
+    animation: anim 500ms ease forwards infinite;
+    border: 1px #717171;
+}
+
+.botonContactoHome:hover:after{
+    animation: anim 500ms 150ms ease forwards infinite;
+    border: 1px #717171;
+} */
+
+@keyframes anim{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        border-color: #fff;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.sol{
+    position: absolute;
+    top: 100px;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.fondo{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/img/29081-ai.png);
+    background-size: 1500px;
+    background-repeat: no-repeat;
+}
+
+.camion{
+    position: absolute;
+    padding-top: 310px;
+    padding-left: -200px;
+    /*left: -200px;*/
+    max-width: 400px;
+    z-index: 10;
+    animation: camion 2s linear infinite;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    user-select: none;
+    pointer-events: none;
+}
+
+.about-seccion{
+    background: #717171;
+    text-align: center;
+}
+
+.about-contenido h3{
+    text-align: center;
+    font-size: 20px;
+}
+.somos-texto p{
+    font-size: 40px;
+    margin: 50px;
+    text-align: center;
+}
+
+.somos-texto p:after{
+    content: " Prodan Construcciones";
+    animation: textanim 15s linear infinite;
+    animation-iteration-count: 1;
+}
+
+@keyframes textanim{
+    25%{
+        content: " Eficientes";
+    }
+    50%{
+        content: " Determinados";
+    }
+    75%{
+        content: " Innovadores";
+    }
+}
+
+
+
+.titulo-seccion {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 3px solid;
+    padding-bottom: 10px;
+}
+
+.pers{
+    float: left;
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.pers img{
+    width: 220px;
+    height: 220px;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    transition: .3s linear;
+}
+
+.pers img:hover{
+    transform: scale(1.15);
+    background-color: #000;
+}
+
+.nombre-pers{
+    margin: 16px 0;
+    text-transform: uppercase;
+}
+
+.rubro-pers{
+    font-style: oblique;
+    color: #717171;
+}
+
+.sm-pers{
+    margin-top: 12px;
+}
+
+.sm-pers a{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 4px;
+    transition: .3s linear;
+}
+
+.carousel{
+    scroll-snap-type: x mandatory;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    inline-size: 80%;
+    min-inline-size: 300px;
+    max-inline-size: 35vw;
+    margin: 4rem auto;
+    user-select: none;
+    border: 1px #000 solid;
+    box-shadow: 0 0 60px rgba(0, 0, 20, .6);
+    border-radius: 1rem;
+    cursor: ew-resize;
+}
+
+#contacto * {
+    margin: 0.3rem;
+    
+}
+
+.item{
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    object-fit: cover;
+    
+}
+
+.imagen_carousel{
+    display: block;
+    block-size: calc(100% + 25px);
+    max-inline-size: 100%;
+}
+
+.sm-pers a:hover{
+    transform: scale(1.25);
+}
+
+.sm-pers a i{
+    color: #717171;
+    line-height: 30px;
+}
+
+
+section.dark{
+    background-color: #717171;
+}
+
+section.dark .section-title{
+    color: #fff;
+}
+
+section.dark .section-title::before{
+    background-color: #fff;
+}
+
+section.dark .section-title::after{
+    border: 4px solid #717171;
+}
+#servicios .titulo-seccion{
+    color: #fff;
+    padding-top: 2vh;
+}
+.servicios{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.servicio{
+    width: calc(33% - 20px);
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    margin: 20px 0;
+    padding: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.servicio .icon{
+    color: #000;
+    font-size: 40px;
+    margin-bottom: 20px;
+    transition: .3s linear;
+}
+.servicio h4{
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.servicio:hover{
+    background-color: #000;
+}
+
+.servicio:hover .icon{
+    color: #fff;
+}
+
+#mapa-ubic{
+    border: 2px solid #000;
+}
+.mapaG {
+    width: 100%;
+    
+}
+.ubicacion{
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer h1{
+    font-size: 1.5vw;
+    text-align: center;
+    background-color: #717171;
+    color: #fff;
+    padding: 1vh;
+}
+.goTop{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #717171;
+    border-radius: 15%;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-size: 22px;
+    transition: .2s linear;
+}
+
+.goTop:hover{
+    transform: scale(1.20);
+}
+
+@keyframes camion{
+    0%{
+        transform: translateX(0px);
+    }
+    90%,100%{
+        transform: translateX(calc(125px));
+    }
+}
+
+
+@media only screen and (max-width: 980px){
+    
+    .navbar,
+    .navbar.sticky{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .activar-boton{
+        display: flex;
+        z-index: 999;
+    }
+    .links-nav{
+        display: none;
+        width: 100%;
+    }
+    .links-nav ul{
+        width: 100%;
+        flex-direction: column;
+    }
+    .links-nav ul li{
+        text-align: center;
+    }
+    .links-nav ul li a{
+        padding: .5rem 1rem;
+    }
+    .links-nav.active{
+        display: flex;
+    }
+    
+    .fondo{
+        background-image: url(/img/29081-ai-mobile.png);
+        position: relative;
+    }
+    .camion{
+        width: 200px;
+        
+        top: 33vh;
+        animation: camion 2s linear infinite;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        pointer-events: none;
+        user-select: none;
+    }
+    .sol{
+        left:20%;
+    }
+    .pers{
+        width: 100%;
+    }
+    #home .contenido h1{
+        font-size: 45px;
+        margin-bottom: 60px;
+        padding-top: 26vh;
+        text-align: left;
+        position: absolute;
+        top: 0;
+        color: #fff;
+        text-shadow: -3px 3px 0px #000,
+        -6px 6px 0px #000,
+        -10px 10px 0px #000;
+    }
+    .botonContactoHome{
+        margin: 0;
+        position: relative;
+    }
+    .somos-texto p{
+        font-size: 10vw;
+        text-align: center;
+    }
+    .servicio{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    .servicio{
+        width: 100%;
+    }
+    .inner-width{
+        padding: 0 20px;
+    }
+    
+}
