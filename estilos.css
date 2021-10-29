@@ -8,6 +8,7 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar{
@@ -610,6 +611,12 @@ footer h1{
     .item{
         width: auto;
         height: 20%;
+    }
+    .carousel{
+        object-fit: cover;
+    }
+    .imagen_carousel{
+        object-fit: cover;
     }
 }
 @media screen and (max-width: 600px){
