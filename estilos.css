@@ -360,7 +360,8 @@ html{
     animation-iteration-count: infinite;
     pointer-events: none;
     user-select: none;
-
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .trabajo{
