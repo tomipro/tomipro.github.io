@@ -21,26 +21,12 @@ html{
     
 }
 
-
 .inner-width{
     max-width: 1300px;
     margin: auto;
     padding: 0 40px;
     overflow: hidden;
 }
-
-/* .navbar{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.3s linear;
-    padding: 20px 100px;
-    z-index: 999;
-} */
 
 .navbar {
     display: flex;
@@ -160,11 +146,6 @@ html{
     color: #717171;
 }
 
-/* #home .contenido h1{
-    font-size: 60px;
-    margin-bottom: 60px;
-    padding-top: 35vh;
-} */
 #home .contenido h1{
     display: flex;
     font-size: 8vw;
