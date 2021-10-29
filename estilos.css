@@ -196,56 +196,6 @@ html{
     margin-left: 50vw;
 }
 
-
-/* .botonContactoHome{
-    margin-top: 60px; 
-}
-
-.botonContactoHome a{
-    display: inline-block;
-    margin: 15px 30px;
-    color: #717171;
-    font-size: 15px;
-    font-weight: 500;
-    width: 180px;
-    border: 1px solid;
-    padding: 10px 0;    
-    border-radius: 6px;
-    transition: .5s linear;
-    text-align: center;
-}
-
-.botonContactoHome a:hover{
-    background-color: #48dbfb;
-    color: #fff;
-} */
-/*------*/
-
-/* .botonContactoHome{
-    padding: 10px 20px;
-    
-} */
-
-/* .botonContactoHome::before,
-.botonContactoHome::after{
-    width: 80%;
-    height: 80%;
-    opacity: 1;
-    transition: all 0.3s cubic-bezier(0.075, 0.83, 0.165, 1);
-    border: none;
-    border-radius: 20px;
-}
-
-.botonContactoHome:hover:before{
-    animation: anim 500ms ease forwards infinite;
-    border: 1px #717171;
-}
-
-.botonContactoHome:hover:after{
-    animation: anim 500ms 150ms ease forwards infinite;
-    border: 1px #717171;
-} */
-
 @keyframes anim{
     0%{
         transform: scale(1);
@@ -286,6 +236,7 @@ html{
 .camion{
     position: absolute;
     padding-top: 310px;
+    padding-bottom: 0;
     padding-left: -200px;
     /*left: -200px;*/
     max-width: 400px;
@@ -402,6 +353,27 @@ html{
     cursor: ew-resize;
 }
 
+.imgs-trabajos {
+    display: flex;
+    animation: trabajo 30s linear infinite;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+    user-select: none;
+
+}
+
+.trabajo{
+    flex: 12.5%;
+    padding: 15px;
+}
+
+
+@keyframes trabajo{
+    from {transform: translateX(-100vw);}
+    to {transform: translateX(100vw);}
+}
+
 #contacto * {
     margin: 0.3rem;
     
@@ -412,7 +384,6 @@ html{
     flex-shrink: 0;
     scroll-snap-align: start;
     object-fit: cover;
-    
 }
 
 .imagen_carousel{
@@ -500,7 +471,7 @@ section.dark .section-title::after{
 }
 
 footer h1{
-    font-size: 1.5vw;
+    font-size: 3vh;
     text-align: center;
     background-color: #717171;
     color: #fff;
@@ -573,7 +544,7 @@ footer h1{
         width: 200px;
         
         top: 33vh;
-        animation: camion 2s linear infinite;
+        animation: camion 3s linear infinite;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         pointer-events: none;
@@ -612,11 +583,12 @@ footer h1{
         width: auto;
         height: 20%;
     }
-    .carousel{
-        object-fit: cover;
-    }
     .imagen_carousel{
         object-fit: cover;
+        height: 25vh;
+    }
+    .trabajo{
+        width: 100%;
     }
 }
 @media screen and (max-width: 600px){
